@@ -26,11 +26,11 @@ export const SneakerModel = {
     });
   },
 
-  create: (name: string, price: number) => {
+  create: (name: string, price: number, image_url: string) => {
     return new Promise((resolve, reject) => {
       db.run(
-        "INSERT INTO sneakers (name, price) VALUES (?, ?)",
-        [name, price],
+        "INSERT INTO sneakers (name, price, image_url) VALUES (?, ?, ?)",
+        [name, price, image_url],
         function (err) {
           if (err) {
             reject(err);

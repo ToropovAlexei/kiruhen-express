@@ -2,6 +2,7 @@ export interface Sneaker {
   id: number;
   name: string;
   price: number;
+  image_url: string;
 }
 
 export interface CartItem {
