@@ -14,6 +14,7 @@
     </form>
     <script>
       document.querySelector("#form").addEventListener("submit", (event) => {
+        event.preventDefault();
         const form = new FormData(event.target);
         fetch("http://localhost:3001/api/sneakers", {
           method: "post",
