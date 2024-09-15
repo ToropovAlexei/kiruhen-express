@@ -9,3 +9,8 @@ export interface CartItem {
   sneaker_id: number;
   quantity: number;
 }
+
+export interface FavoriteItem {
+  id: number;
+  sneaker_id: number;
+}

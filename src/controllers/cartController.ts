@@ -6,7 +6,7 @@ interface CartRequestBody {
   quantity: number;
 }
 
-const CartController = {
+export const CartController = {
   getCart: async (req: Request, res: Response): Promise<void> => {
     try {
       const cart = await CartModel.getAll();
@@ -60,5 +60,3 @@ const CartController = {
     }
   },
 };
-
-export default CartController;
