@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="post" id="form">
+      <input type="text" name="name" id="" />
+      <input type="number" name="price" id="" />
+      <input type="file" name="image" id="" />
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      document.querySelector("#form").addEventListener("submit", (event) => {
+        const form = new FormData(event.target);
+        fetch("http://localhost:3001/api/sneakers", {
+          method: "post",
+          headers: { contentType: "multipart/form-data" },
+          body: form,
+        });
+      });
+    </script>
+  </body>
+</html>
